@@ -87,11 +87,11 @@ default_time_zone="+07:00"
 
 ## DB Step 2
 ```
-mysql> CREATE DATABASE morpheus CHARACTER SET utf8 COLLATE utf8_general_ci;
-mysql> show databases;
-mysql> CREATE USER 'morpheusDbUser'@'%' IDENTIFIED BY 'morpheusDbUserPassword';
-mysql> GRANT ALL PRIVILEGES ON *.* TO 'morpheusDbUser'@'%' IDENTIFIED BY 'morpheusDbUserPassword';
-mysql> FLUSH PRIVILEGES;
-mysql> exit;
+CREATE DATABASE morpheus CHARACTER SET utf8 COLLATE utf8_general_ci;
+show databases;
+CREATE USER 'morpheusDbUser'@'%' IDENTIFIED BY 'morpheusDbUserPassword';
+GRANT ALL PRIVILEGES ON *.* TO 'morpheusDbUser'@'%' IDENTIFIED BY 'morpheusDbUserPassword';
+FLUSH PRIVILEGES;
+exit;
 
 ```
