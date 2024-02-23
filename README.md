@@ -13,9 +13,10 @@ sed -i 's/SELINUX=enforcing/SELINUX=permissive/g' /etc/selinux/config
 
 ```
 
-## 
+## Percona Repo
 ```
-
+yum install -y https://repo.percona.com/yum/percona-release-latest.noarch.rpm
+percona-release setup pxc-57
 
 ```
 
