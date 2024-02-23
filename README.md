@@ -6,10 +6,25 @@ firewall-cmd --list-ports
 
 ```
 
-## SELinux
+## SELinux [premessive]
 ```
 setenforce 0
 sed -i 's/SELINUX=enforcing/SELINUX=permissive/g' /etc/selinux/config
+
+```
+
+## SELinux [enforcing]
+```
+yum install policycoreutils-python-utils
+semanage port -m -t mysqld_port_t -p tcp 4444
+semanage port -m -t mysqld_port_t -p tcp 4567
+semanage port -a -t mysqld_port_t -p tcp 4568
+
+```
+```
+checkmodule -M -m -o PXC.mod PXC.te
+semodule_package -o PXC.pp -m PXC.mod
+semodule -i PXC.pp
 
 ```
 
