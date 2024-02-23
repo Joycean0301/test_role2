@@ -41,7 +41,11 @@ yum update -y --skip-broken
 
 ## 
 ```
-
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'rootPassword';
+CREATE USER 'sstuser'@'localhost' IDENTIFIED BY 'sstUserPassword';
+GRANT RELOAD, LOCK TABLES, PROCESS, REPLICATION CLIENT ON *.* TO 'sstuser'@'localhost';
+FLUSH PRIVILEGES;
+exit;
 
 ```
 
