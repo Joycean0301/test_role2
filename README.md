@@ -20,9 +20,10 @@ percona-release setup pxc-57
 
 ```
 
-## 
+## Clean
 ```
-
+yum clean all
+yum update -y --skip-broken
 
 ```
 
