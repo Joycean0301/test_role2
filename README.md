@@ -95,3 +95,14 @@ FLUSH PRIVILEGES;
 exit;
 
 ```
+
+## Copy and overide
+```
+scp /var/lib/mysql/ca.pem root@10.200.4.22:/root
+scp /var/lib/mysql/server-cert.pem root@10.200.4.22:/root
+scp /var/lib/mysql/server-key.pem root@10.200.4.22:/root
+
+cp -f /root/ca.pem /var/lib/mysql/
+cp -f /root/server-cert.pem /var/lib/mysql/
+cp -f /root/server-key.pem /var/lib/mysql/
+```
